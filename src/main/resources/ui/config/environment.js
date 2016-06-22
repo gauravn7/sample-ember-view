@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ui',
+    modulePrefix: 'demo',
     environment: environment,
     baseURL: '/',
     locationType: 'hash',

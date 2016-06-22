@@ -30,8 +30,5 @@ export default Ember.Route.extend({
     }
     var url = '/api/v1/views' + view + version + '/instances' + instance + '/resources/demo/username';
     return Ember.$.getJSON(url);
-  },
-  afterModel: function(model) {
-    console.log("model", model);
   }
 });

@@ -43,7 +43,7 @@ public class HelpService {
   @GET
   @Path("/username")
   @Produces(MediaType.APPLICATION_JSON)
-  public Response description() {
+  public Response username() {
     HashMap<String, Object> response = new HashMap<String, Object>();
     response.put("username", context.getUsername());
     return Response.ok(response).build();
