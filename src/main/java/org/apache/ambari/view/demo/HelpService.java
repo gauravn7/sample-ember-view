@@ -6,9 +6,9 @@
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
  * with the License.  You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p/>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p/>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -26,6 +26,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.HashMap;
 
 /**
  * Help service
@@ -36,14 +37,16 @@ public class HelpService {
   ViewContext context;
 
   /**
-   * Description
-   * @return description
+   * Username
+   * @return username
    */
   @GET
-  @Path("/")
-  @Produces(MediaType.TEXT_PLAIN)
+  @Path("/username")
+  @Produces(MediaType.APPLICATION_JSON)
   public Response description() {
-    return Response.ok("Demo view application. Loggedin User : " + context.getUsername()).build();
+    HashMap<String, Object> response = new HashMap<String, Object>();
+    response.put("username", context.getUsername());
+    return Response.ok(response).build();
   }
 
 }

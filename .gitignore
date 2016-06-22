@@ -5,11 +5,6 @@
 .iml/
 .DS_Store
 target
-/ambari-server/derby.log
-/ambari-server/pass.txt
-/ambari-web/npm-debug.log
-/ambari-web/public/
-/ambari-web/node_modules/
 *.pyc
 *.py~
 *.iml
@@ -18,9 +13,7 @@ target
 .hgtags
 derby.log
 pass.txt
-ambari-agent/src/test/python/ambari_agent/dummy_files/current-stack
 velocity.log*
-ambari-metrics/ambari-metrics-host-monitoring/src/main/python/psutil/build/
 rebel.xml
 rebel-remote.xml
 out
